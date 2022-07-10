@@ -8,8 +8,12 @@ const pageLoad = (() => {
     container.appendChild(background);
   }
 
-  const appendContent = (element) => {
+  const appendElement = (element) => {
     container.appendChild(element);
+  }
+
+  const appendInnerHTML = (string) => {
+    container.innerHTML += string;
   }
 
   const clearContent = () => {
@@ -18,7 +22,7 @@ const pageLoad = (() => {
     }
   }
 
-  return {background, appendContent, clearContent};
+  return {background, appendElement, appendInnerHTML, clearContent};
 
 })();
 
