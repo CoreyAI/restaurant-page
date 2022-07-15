@@ -1,11 +1,11 @@
-const Header = () => {
+const Header = (() => {
   const template = `
     <nav>
       <h1>test</h1>
     </nav>
   `;
 
-  return template;
-}
+  return {template};
+})();
 
 export {Header};
