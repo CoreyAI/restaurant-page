@@ -1,6 +1,6 @@
 const pageLoad = (() => {
 
-  const container = document.getElementById("content");
+  const container = document.getElementById("container");
   
   const background = (link) => {
     const background = document.createElement("img");
