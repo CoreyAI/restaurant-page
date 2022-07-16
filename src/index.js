@@ -1,6 +1,7 @@
 import { pageLoad } from "./page-load";
 import { Header } from "./header";
 import './style.css';
+import { Footer } from "./footer";
 
 // pageLoad.background("../src/pasta_bowl.jpg");
 
@@ -21,3 +22,4 @@ import './style.css';
 // pageLoad.appendElement(test);
 
 pageLoad.appendInnerHTML(Header.template);
+pageLoad.appendInnerHTML(Footer.template);
