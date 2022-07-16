@@ -1,7 +1,12 @@
 const Header = (() => {
   const template = `
-    <nav>
-      <h1>test</h1>
+    <nav class="header">
+      <div class="restaurant-name">Uncle Tony's</div>
+      <div class="header-links">
+        <div class="link" id="active">Home</div>
+        <div class="link">Menu</div>
+        <div class="link">Contact</div>
+      </div>
     </nav>
   `;
 
