@@ -1,3 +1,65 @@
-h1 {
-  color: green;
+:root {
+  --background-color: rgb(230, 224, 212);
+  --accent-color: rgb(244,	237,	230);
+  --hover-color: rgb(230, 224, 212);
+  --active-link-color: rgb(55,	55,	55);
+}
+
+#container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4rem 1fr 1.5rem;
+  grid-template-areas: 
+    "nav"
+    "body"
+    "footer";
+}
+
+nav {
+  background-color: var(--accent-color);
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.restaurant-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.header-links {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header-links > * {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0rem 2rem;
+}
+
+.header-links > #active {
+  background-color: var(--active-link-color);
+  color: white;
+}
+
+.link:hover {
+  background-color: var(--hover-color);
+  /* color: white; */
+}
+
+footer {
+  background-color: var(--accent-color);
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
