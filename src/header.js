@@ -10,7 +10,19 @@ const Header = (() => {
     </nav>
   `;
 
-  return {template};
+  const setActiveTab = (tabElement) => {
+    const links = document.querySelectorAll(".link");
+    links.forEach(link => {
+      if (link.id == "active") {
+        link.removeAttribute("id");
+      }
+      if (link.innerText == tabElement.target.outerText) {
+        link.setAttribute("id", "active");
+      }
+    });
+  }
+
+  return {template, setActiveTab};
 })();
 
 export {Header};

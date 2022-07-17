@@ -1,7 +1,7 @@
 import { pageLoad } from "./page-load";
 import { Header } from "./header";
-import './style.css';
 import { Footer } from "./footer";
+import './style.css';
 
 // pageLoad.background("../src/pasta_bowl.jpg");
 
@@ -23,3 +23,11 @@ import { Footer } from "./footer";
 
 pageLoad.appendInnerHTML(Header.template);
 pageLoad.appendInnerHTML(Footer.template);
+
+const headerLinks = document.querySelectorAll(".link");
+
+headerLinks.forEach(link => {
+    link.addEventListener("click", e => {
+        Header.setActiveTab(e);
+    })
+});
