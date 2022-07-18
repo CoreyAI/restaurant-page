@@ -13,8 +13,6 @@ const headerLinks = document.querySelectorAll(".link");
 headerLinks.forEach(link => {
     link.addEventListener("click", e => {
         Header.setActiveTab(e);
-        console.log(content.getContainerElement());
-        console.log((e.target.outerText).toLowerCase())
         content.setContainerElement(e);
     })
 }); 
