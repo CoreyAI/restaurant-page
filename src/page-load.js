@@ -16,9 +16,13 @@ const pageLoad = (() => {
     container.innerHTML += string;
   }
 
-  const clearContent = () => {
-    for (let i = 0; i <= container.childNodes.length; i++) {
-      container.childNodes[0].remove();
+  const clearContent = (node) => {
+    if (node) {
+      node[0].innerHTML = '';
+    } else {
+      for (let i = 0; i <= container.childNodes.length; i++) {
+        container.childNodes[0].remove();
+      }
     }
   }
 
